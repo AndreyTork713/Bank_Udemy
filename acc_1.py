@@ -7,6 +7,7 @@ class Account(object):
     def deposit(self):
         l = int(input('Enter the depo: '))
         self.balance = self.balance + l
+        print('Your balance now: %s' %self.balance)
         return self.balance
 
     def withdraw(self):
@@ -17,5 +18,17 @@ class Account(object):
             print('Your balance equals null!!!')
         else:
             self.balance = self.balance - s
+            print('Your balance now: %s' %self.balance)
             return self.balance
 
+    def __str__(self):
+        print('Owner: %s' % self.owner)
+        print('Balance: %s' %self.balance)
+
+
+acc1 = Account('Jose',1000)
+acc1.__str__()
+acc1.deposit()
+acc1.withdraw()
+
+acc1.__str__()
