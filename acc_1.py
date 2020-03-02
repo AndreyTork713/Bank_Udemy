@@ -18,3 +18,5 @@ class Account(object):
         else:
             self.balance = self.balance - s
             return self.balance
+
+    print('Hello world')
