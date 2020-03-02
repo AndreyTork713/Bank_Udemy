@@ -5,28 +5,28 @@ class Account(object):
         self.balance = balance
 
     def deposit(self):
-        l = int(input('Enter the depo: '))
-        self.balance = self.balance + l
-        print('Your balance now: %s' %self.balance)
+        a = int(input('Enter the depo: '))
+        self.balance = self.balance + a
+        print('Your balance now: %s' % self.balance)
         return self.balance
 
     def withdraw(self):
-        s = int(input('Enter the amount withdraw: '))
-        if self.balance < s:
+        b = int(input('Enter the amount withdraw: '))
+        if self.balance < b:
             print('Error: you balance is less amount withdraw!')
-        elif self.balance == s:
+        elif self.balance == b:
             print('Your balance equals null!!!')
         else:
-            self.balance = self.balance - s
-            print('Your balance now: %s' %self.balance)
+            self.balance = self.balance - b
+            print('Your balance now: %s' % self.balance)
             return self.balance
 
     def __str__(self):
         print('Owner: %s' % self.owner)
-        print('Balance: %s' %self.balance)
+        print('Balance: %s' % self.balance)
 
 
-acc1 = Account('Jose',1000)
+acc1 = Account('Jose', 1000)
 acc1.__str__()
 acc1.deposit()
 acc1.withdraw()
