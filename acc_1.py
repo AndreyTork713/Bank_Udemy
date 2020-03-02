@@ -23,14 +23,14 @@ class Account(object):
             return self.balance
 
     def __str__(self):
-        print('Owner: %s' % self.owner)
-        print('Balance: %s' % self.balance)
+        return f'Owner: {self.owner} \nBalance: {self.balance}'
+
 
 
 acc1 = Account('Jose', 1000)
-acc1.__str__()
+print(acc1)
 
 acc1.deposit()
 acc1.withdraw()
 
-acc1.__str__()
+print(acc1)
