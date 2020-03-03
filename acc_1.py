@@ -6,7 +6,8 @@ class Account(object):
 
     def deposit(self):
         a = int(input('Enter the depo:\n '))
-        self.balance = self.balance + a
+        #self.balance = self.balance + a
+        self.balance += a
         print('Your balance now: %s' % self.balance)
         return self.balance
 
@@ -15,10 +16,12 @@ class Account(object):
         if self.balance < b:
             print('Error: you balance is less amount withdraw!')
         elif self.balance == b:
-            self.balance = self.balance - b
+            #self.balance = self.balance - b
+            self.balance -= b
             print('Your balance equals null!!!')
         else:
-            self.balance = self.balance - b
+            #self.balance = self.balance - b
+            self.balance -= b
             print('Your balance now: %s' % self.balance)
             return self.balance
 
